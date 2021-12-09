@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --supernova: #ff9720;
+      --sm: 15px;
+      --md: 17px;
+      --lg: 20px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--supernova);
+    margin-bottom: 40px;
+    }
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 200px;
+      margin-right: 40px;
+    }
+    .navbar-left ul,
+    .navbar-right ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      height: 100px;
+    }
+    .navbar-left {
+      display: flex;
+    }
+    .navbar-left ul {
+      margin-left: 12px;
+    }
+    .navbar-left ul li a,
+    .navbar-right ul li a {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      border: 1px solid var(--white);
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .navbar-left ul li a:hover,
+    .navbar-right ul li a:hover {
+      border: 1px solid var(--supernova);
+      color: var(--supernova);
+    }
+    .navbar-email {
+      color: var(--very-light-pink);
+      font-size: var(--sm);
+      margin-right: 60px;
+    }
+    .navbar-carrito img {
+      margin-top: 10px; 
+
+    }
+    .navbar-carrito div {
+      width: 10px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: var(--sm);
+      font-weight: bold;
+      position: absolute;
+      padding-top: 40px;
+      right: -3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cards-container {
+
+display: grid;
+/* repeat permite que las colunmas se repitan,dentro van dos parametros (elrpimero es la cantidad de columnas pero vpn auto fill permite la capacidad segun de la pagina ,el otro esel tamaño)  */
+grid-template-columns: repeat(auto-fill, 250px);
+/* espacio entre las card */
+gap: 90px;
+/* centrar las card */
+place-content: center;
+}
+.product-card {
+width: 250px;
+}
+.product-card img {
+width: 250px;
+height: 250px;
+border-radius: 30px;
+/* la propiedad object-fit adecua la imagen al tamaño que se aplica */
+object-fit: cover;
+}
+
+.product-info {
+display: flex;
+/* space-between para el espacio entre text y img */
+justify-content: space-between;
+align-items: center;
+margin-top: 12px;
+
+}
+.product-info figure {
+margin: 0;
+}
+/* especificacion de img carrito */
+.product-info figure img {
+width: 35px;
+height: 35px;
+margin-top: 30px;
+}
+.product-info div p:nth-child(1) {
+font-weight: bold;
+font-size: var(--md);
+margin-top: 0;
+margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+font-size: var(--sm);
+margin-top: 0;
+margin-bottom: 0;
+color: var(--very-light-pink);
+}
+    @media (max-width: 640px) {
+      .menu {
+        width: 50px;
+        height:50px;
+        margin-top: 30px;
+        display: block;
+      }
+      .logo{
+        width: 100px;
+      }
+      .navbar-left ul {
+        display: none;
+      }
+      .navbar-email {
+        display: none;
+      }
+    } 
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="../../icons/menu.png" alt="menu" class="menu">
+
+    <div class="navbar-left">
+      <img src="../../logos/logovertical.svg" alt="logo" class="logo">
+
+      <ul>
+        <li>
+          <a href="/">Todo</a>
+        </li>
+        <li>
+          <a href="/">Dulces</a>
+        </li>
+        <li>
+          <a href="/">Desayunos</a>
+        </li>
+        <li>
+          <a href="/">reposteria</a>
+        </li>
+        <li>
+          <a href="/">peluches</a>
+        </li>
+        <li>
+          <a href="/">Otros</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">Inxiar sesión</li>
+        <li class="navbar-carrito">
+          <img src="../../icons/anadir-al-carrito.png" alt="carrito">
+          
+          <div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section class="main-container">
+    <div class="cards-container">
+
+      <div class="product-card">
+        <img src="/logos/imagendeprueba.jpg" alt="">
+        <div class="product-info">
+          <div>
+            <p>$20.000</p>
+            <p>Hot cake</p>
+          </div>
+          <figure>
+            <img src="./icons/anadir-al-carrito.png" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+        <div class="product-info">
+          <div>
+            <p>$30.000</p>
+            <p>desayuno</p>
+          </div>
+          <figure>
+            <img src="./icons/anadir-al-carrito.png" alt="">
+          </figure>
+        </div>
+      </div>
+
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$20.000</p>
+              <p>Hot cake</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+  
+        <div class="product-card">
+          <img src="/logos/imagendeprueba.2jpg.jpg" alt="">
+          <div class="product-info">
+            <div>
+              <p>$30.000</p>
+              <p>desayuno</p>
+            </div>
+            <figure>
+              <img src="./icons/anadir-al-carrito.png" alt="">
+            </figure>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    }
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  box-shadow: 0px 0px 0px 6px rgb(214, 212, 212);
+ 
+}
+.logoadmi {
+    border-radius: 10px;
+    height: 127px;
+    width: 260px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+.sidenav a {
+  padding: 0px 1px 2px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #1dbdb5;
+}
+
+.span_secciones{
+    position: absolute;
+     margin: 7px 0 0 12px;
+     
+}    
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.Menu{
+    font-size: 45px;
+    cursor:pointer;
+    color: #1dbdb5;
+    margin-left: 10px;
+}
+.img-side-nav{
+    height: 40px;
+  }
+
+.closebtn{
+    cursor:pointer;
+}
+
+ul li {
+  display: none;
+  margin-left: 70px;
+}
+.fas{
+  color: #1dbdb5;
+  margin-right:10px;
+}
+.far{
+color: #1dbdb5;
+margin-right:10px;
+}
+.sidenav::-webkit-scrollbar{
+  width: 7px;
+}
+.sidenav::-webkit-scrollbar-thumb{
+  background-color: #1dbdb5;
+}
+.sidenav::-webkit-scrollbar-thumb{
+  background-color: #1dbdb5;
+  border-radius: 10px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

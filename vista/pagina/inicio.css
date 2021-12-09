@@ -1,0 +1,79 @@
+/* Aquí es donde podemos sacar provecho de las Variables CSS al almacenar el tamaño fijo de las 
+cards en su contenedor padre, utilizarla en cada propiedad donde se requiera y solo cambiar el 
+valor de esta variable en Responsive. */
+  :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .cards-container {
+
+      display: grid;
+      /* repeat permite que las colunmas se repitan,dentro van dos parametros (elrpimero es la cantidad de columnas pero vpn auto fill permite la capacidad segun de la pagina ,el otro esel tamaño)  */
+      grid-template-columns: repeat(auto-fill, 250px);
+      /* espacio entre las card */
+      gap: 90px;
+      /* centrar las card */
+      place-content: center;
+    }
+    .product-card {
+      width: 250px;
+    }
+    .product-card img {
+      width: 250px;
+      height: 250px;
+      border-radius: 30px;
+      /* la propiedad object-fit adecua la imagen al tamaño que se aplica */
+      object-fit: cover;
+    }
+
+    .product-info {
+      display: flex;
+      /* space-between para el espacio entre text y img */
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+
+    }
+    .product-info figure {
+      margin: 0;
+    }
+    /* especificacion de img carrito */
+    .product-info figure img {
+      width: 35px;
+      height: 35px;
+    }
+    .product-info div p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .product-info div p:nth-child(2) {
+      font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--very-light-pink);
+    }
+    /* sirve para reponsive y cuando llegue aun determinado tamaño como el celular cambie  */
+    @media (max-width: 640px) {
+      .cards-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+      }
+      .product-card {
+        width: 140px;
+      }
+      .product-card img {
+        width: 140px;
+        height: 140px;
+      }
+    }
